@@ -1,0 +1,291 @@
+{
+  "name": "EriX",
+  "version": "0.0.1",
+  "platformCount": 2,
+  "emulatorCount": 13,
+  "platforms": [
+    {
+      "id": "windows",
+      "name": "Windows",
+      "fullName": "Windows",
+      "details": {
+        "company": "Microsoft",
+        "release": "1995-08-24",
+        "description": "Collection of Windows games from: Steam, Epic, GOG, etc",
+        "type": "computer"
+      },
+      "folders": [
+        "amazon",
+        "desktop",
+        "epic",
+        "gog",
+        "steam",
+        "pcgames",
+        "windows"
+      ],
+      "emulators": {
+        "standalone": [
+          {
+            "id": "gamehub.lite",
+            "name": "GameHub Lite",
+            "provider": "GameHub",
+            "extensions": [
+              "localgameid",
+              "steamappid"
+            ],
+            "intent": {
+              "packageName": "gamehub.lite",
+              "className": "com.xj.landscape.launcher.ui.gamedetail.GameDetailActivity",
+              "action": "gamehub.lite.LAUNCH_GAME",
+              "extra": {
+                "autoStartGame": true,
+                "localGameId": "{FILE_DATA}",
+                "steamAppId": "{FILE_DATA}"
+              }
+            }
+          },
+          {
+            "id": "gamehub.lite.antutu",
+            "name": "GameHub Lite (Antutu)",
+            "provider": "GameHub",
+            "extensions": [
+              "localgameid",
+              "steamappid"
+            ],
+            "intent": {
+              "packageName": "com.antutu.ABenchMark",
+              "className": "com.xj.landscape.launcher.ui.gamedetail.GameDetailActivity",
+              "action": "gamehub.lite.LAUNCH_GAME",
+              "extra": {
+                "autoStartGame": true,
+                "localGameId": "{FILE_DATA}",
+                "steamAppId": "{FILE_DATA}"
+              }
+            }
+          },
+          {
+            "id": "gamehub.lite.ludashi",
+            "name": "GameHub Lite (Ludashi)",
+            "provider": "GameHub",
+            "extensions": [
+              "localgameid",
+              "steamappid"
+            ],
+            "intent": {
+              "packageName": "com.ludashi.aibench",
+              "className": "com.xj.landscape.launcher.ui.gamedetail.GameDetailActivity",
+              "action": "gamehub.lite.LAUNCH_GAME",
+              "extra": {
+                "autoStartGame": true,
+                "localGameId": "{FILE_DATA}",
+                "steamAppId": "{FILE_DATA}"
+              }
+            }
+          },
+          {
+            "id": "gamehub.lite.pubg",
+            "name": "GameHub Lite (PUBG)",
+            "provider": "GameHub",
+            "extensions": [
+              "localgameid",
+              "steamappid"
+            ],
+            "intent": {
+              "packageName": "com.tencent.ig",
+              "className": "com.xj.landscape.launcher.ui.gamedetail.GameDetailActivity",
+              "action": "gamehub.lite.LAUNCH_GAME",
+              "extra": {
+                "autoStartGame": true,
+                "localGameId": "{FILE_DATA}",
+                "steamAppId": "{FILE_DATA}"
+              }
+            }
+          },
+          {
+            "id": "gamenative",
+            "name": "GameNative",
+            "default": true,
+            "achievements": true,
+            "extensions": [
+              "amazon",
+              "custom_game",
+              "epic",
+              "gog",
+              "steam"
+            ],
+            "intent": {
+              "packageName": "app.gamenative",
+              "className": "app.gamenative.MainActivity",
+              "action": "app.gamenative.LAUNCH_GAME",
+              "extra": {
+                "app_id": "{FILE_DATA}",
+                "game_source": "'{FILE_EXT}'"
+              }
+            }
+          },
+          {
+            "id": "micewine",
+            "name": "MiceWine",
+            "extensions": [
+              "lnk"
+            ],
+            "intent": {
+              "packageName": "com.micewine.emu",
+              "className": "com.micewine.emu.activities.MainActivity",
+              "extra": {
+                "exePath": "{FILE_PATH}"
+              }
+            }
+          },
+          {
+            "id": "winlator.cmod",
+            "name": "Winlator CMod",
+            "provider": "Winlator",
+            "extensions": [
+              "desktop"
+            ],
+            "intent": {
+              "packageName": "com.winlator.cmod",
+              "className": "com.winlator.cmod.XServerDisplayActivity",
+              "extra": {
+                "shortcut_path": "{FILE_PATH}"
+              }
+            }
+          },
+          {
+            "id": "winlator.cmod.proot",
+            "name": "Winlator CMod Proot",
+            "provider": "Winlator",
+            "extensions": [
+              "desktop"
+            ],
+            "intent": {
+              "packageName": "com.cmodded.winlator",
+              "className": "com.winlator.XServerDisplayActivity",
+              "extra": {
+                "shortcut_path": "{FILE_PATH}"
+              }
+            }
+          },
+          {
+            "id": "winlator.default",
+            "name": "Winlator Default",
+            "provider": "Winlator",
+            "extensions": [
+              "desktop"
+            ],
+            "intent": {
+              "packageName": "com.winlator",
+              "className": "com.winlator.XServerDisplayActivity",
+              "extra": {
+                "shortcut_path": "{FILE_PATH}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "psp",
+      "name": "PSP",
+      "fullName": "PlayStation Portable",
+      "details": {
+        "company": "Sony",
+        "release": "2004-12-12",
+        "description": "Sony's iconic handheld that brought console-quality gaming right into your pocket",
+        "type": "handheld"
+      },
+      "folders": [
+        "psp",
+        "PlayStation Portable",
+        "Sony PlayStation Portable"
+      ],
+      "emulators": {
+        "retroarch": [
+          {
+            "core": "ppsspp",
+            "name": "PPSSPP",
+            "achievements": true,
+            "extensions": [
+              "chd",
+              "cso",
+              "elf",
+              "iso",
+              "pbp",
+              "ppdmp",
+              "prx"
+            ]
+          }
+        ],
+        "standalone": [
+          {
+            "id": "ppsspp.default",
+            "name": "PPSSPP Default",
+            "provider": "PPSSPP",
+            "default": true,
+            "achievements": true,
+            "extensions": [
+              "cso",
+              "chd",
+              "elf",
+              "iso",
+              "pbp",
+              "ppdmp",
+              "prx"
+            ],
+            "intent": {
+              "packageName": "org.ppsspp.ppsspp",
+              "className": "org.ppsspp.ppsspp.PpssppActivity",
+              "action": "android.intent.action.VIEW",
+              "category": "android.intent.category.DEFAULT",
+              "data": "{FILE_URI}"
+            }
+          },
+          {
+            "id": "ppsspp.gold",
+            "name": "PPSSPP Gold",
+            "provider": "PPSSPP",
+            "achievements": true,
+            "extensions": [
+              "cso",
+              "chd",
+              "elf",
+              "iso",
+              "pbp",
+              "ppdmp",
+              "prx"
+            ],
+            "intent": {
+              "packageName": "org.ppsspp.ppssppgold",
+              "className": "org.ppsspp.ppsspp.PpssppActivity",
+              "action": "android.intent.action.VIEW",
+              "category": "android.intent.category.DEFAULT",
+              "data": "{FILE_URI}"
+            }
+          },
+          {
+            "id": "ppsspp.legacy",
+            "name": "PPSSPP Legacy",
+            "provider": "PPSSPP",
+            "extensions": [
+              "cso",
+              "chd",
+              "elf",
+              "iso",
+              "pbp",
+              "ppdmp",
+              "prx"
+            ],
+            "intent": {
+              "packageName": "org.ppsspp.ppsspplegacy",
+              "className": "org.ppsspp.ppsspp.PpssppActivity",
+              "action": "android.intent.action.VIEW",
+              "category": "android.intent.category.DEFAULT",
+              "data": "{FILE_URI}"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

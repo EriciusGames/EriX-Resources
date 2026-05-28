@@ -1,0 +1,9 @@
+# IDEs and Editors
+.idea/
+.vscode/
+
+# Node
+node_modules/
+
+# Project Related
+research/
